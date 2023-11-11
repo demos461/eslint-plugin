@@ -37,6 +37,24 @@ ruleTester.run("public-api-imports", rule, {
       errors: [],
       options: aliasOptions,
     },
+    {
+      filename: 'D:\\Projects\\blog\\src\\entities\\file.test.ts',
+      code: "import { addCommentFormActions, addCommentFormReducer } from '@/entities/Article/testing'",
+      errors: [],
+      options: [{
+        alias: '@',
+        testFilesPatterns: ['**/*.test.ts', '**/*.test.ts', '**/StoreDecorator.tsx']
+      }],
+    },
+    {
+      filename: 'D:\\Projects\\blog\\src\\entities\\StoreDecorator.tsx',
+      code: "import { addCommentFormActions, addCommentFormReducer } from '@/entities/Article/testing'",
+      errors: [],
+      options: [{
+        alias: '@',
+        testFilesPatterns: ['**/*.test.ts', '**/*.test.ts', '**/StoreDecorator.tsx']
+      }],
+    }
   ],
 
   invalid: [
@@ -45,5 +63,23 @@ ruleTester.run("public-api-imports", rule, {
       errors: [{ message: "Absolute import is only allowed from Public API (index.ts)"}],
       options: aliasOptions,
     },
+    {
+      filename: 'D:\\Projects\\blog\\src\\entities\\StoreDecorator.tsx',
+      code: "import { addCommentFormActions, addCommentFormReducer } from '@/entities/Article/testing/file.tsx'",
+      errors: [{message: 'Absolute import is only allowed from Public API (index.ts)'}],
+      options: [{
+        alias: '@',
+        testFilesPatterns: ['**/*.test.ts', '**/*.test.ts', '**/StoreDecorator.tsx']
+      }],
+    },
+    {
+      filename: 'D:\\Projects\\blog\\src\\entities\\forbidden.ts',
+      code: "import { addCommentFormActions, addCommentFormReducer } from '@/entities/Article/testing'",
+      errors: [{message: 'Testing data should be import from Public API (testing.ts)'}],
+      options: [{
+        alias: '@',
+        testFilesPatterns: ['**/*.test.ts', '**/*.test.ts', '**/StoreDecorator.tsx']
+      }],
+    }
   ],
 });
