@@ -42,10 +42,11 @@ Then configure the rules you want to use under the rules section.
 ## Rules
 <!-- begin auto-generated rules list -->
 
-| Name                                                   | Description                          |
-| :----------------------------------------------------- | :----------------------------------- |
-| [path-checker](docs/rules/path-checker.md)             | feature sliced relative path checker |
-| [public-api-imports](docs/rules/public-api-imports.md) | checking imports to public API rules |
+| Name                                                   | Description                                   |
+| :----------------------------------------------------- | :-------------------------------------------- |
+| [layer-imports](docs/rules/layer-imports.md)           | checking feature sliced design layers imports |
+| [path-checker](docs/rules/path-checker.md)             | feature sliced relative path checker          |
+| [public-api-imports](docs/rules/public-api-imports.md) | checking imports to public API rules          |
 
 <!-- end auto-generated rules list -->
 

@@ -1,6 +1,4 @@
-# Checking imports to public API rules (`eliasxlii-plugin/public-api-imports`)
-
-<!-- end auto-generated rule header -->
+# Checking feature sliced design layers imports (`eliasxlii-plugin/layer-imports`)
 
 <!-- end auto-generated rule header -->
 
