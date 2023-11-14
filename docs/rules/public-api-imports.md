@@ -1,5 +1,7 @@
 # Checking imports to public API rules (`eliasxlii-plugin/public-api-imports`)
 
+🔧 This rule is automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/latest/user-guide/command-line-interface#--fix).
+
 <!-- end auto-generated rule header -->
 
 <!-- end auto-generated rule header -->
